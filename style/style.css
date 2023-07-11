@@ -357,4 +357,39 @@ li {
   #sNome {
     font-size: 24px;
   }
+  #inspo h2 {
+    color: #0088d6;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #infos,
+  #journey {
+    padding: 16px 0 16px 25px;
+  }
+  #inspo {
+    padding: 16px 0 16px 25px;
+  }
+  #inspoList {
+    padding: 16px 0 16px 25px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #infos {
+    padding: 16px 0 16px 10px;
+  }
+  #dados {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .blur h1,
+  h2,
+  p,
+  ul,
+  li {
+    font-size: 14px;
+  }
 }
