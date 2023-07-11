@@ -25,6 +25,7 @@ aside {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -37,7 +38,8 @@ main {
   box-shadow: inset 16px 0px 15px -3px #00000059;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   font-family: "Fira Code", monospace;
 }
 
@@ -111,9 +113,16 @@ main {
   width: 75%;
 }
 
+#logo2 {
+  display: none;
+}
+
+#nome {
+  display: none;
+}
+
 #blur {
-  margin: 3% 5%;
-  height: 100%;
+  margin: 1% 2%;
   width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.137);
   backdrop-filter: blur(5px);
@@ -139,6 +148,7 @@ li {
   font-weight: 600;
   list-style: none;
   color: #000c1b;
+  padding-right: 32px;
 }
 
 #dados {
@@ -154,6 +164,7 @@ li {
 
 #ogMain {
   width: 95%;
+  height: 95%;
 }
 
 #infos,
@@ -242,4 +253,108 @@ li {
 
 #whatsapp:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1600px) {
+  #organization {
+    flex-direction: column;
+  }
+  #fixed {
+    position: static;
+    height: 20%;
+    width: 100%;
+    background: linear-gradient(180deg, #000c1b 0%, #003985 75%);
+  }
+  #ftPerfil {
+    width: 200px;
+  }
+  #fixed {
+    flex-direction: row;
+  }
+  #eu {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    padding: 50px 90px 50px 120px;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 40px;
+  }
+  #logo {
+    display: none;
+  }
+  #logo2 {
+    display: block;
+  }
+  #links {
+    width: 40%;
+  }
+  main {
+    box-shadow: inset 0px 16px 15px -3px #00000059;
+  }
+  #inspoList {
+    margin: 12px 60px 0 90px;
+  }
+}
+
+@media screen and (max-width: 1325px) {
+  #inspoList {
+    margin: 12px 60px 0 70px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #inspoList {
+    margin: 12px 60px 0 45px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  #fixed {
+    flex-direction: column;
+  }
+  #links {
+    width: 95%;
+  }
+  #eu {
+    margin: 40px 40px 0px 40px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 40px;
+  }
+  #logo2 {
+    display: none;
+  }
+  #ftPerfil {
+    width: 20%;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: inset 0px -5px 22px 2px rgba(0, 0, 0, 0.74);
+  }
+  #nome {
+    display: block;
+    padding: 0;
+    margin-left: 30px;
+  }
+  #links {
+    margin: 8px 0;
+  }
+  #pNome,
+  #sNome {
+    font-size: 40px;
+  }
+  #inspoList {
+    margin: 12px 60px 0 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #inspoList {
+    margin: 12px 60px 0 15px;
+  }
+  #pNome,
+  #sNome {
+    font-size: 24px;
+  }
 }
