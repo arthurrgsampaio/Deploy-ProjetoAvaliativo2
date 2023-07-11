@@ -226,3 +226,20 @@ li {
 ::-webkit-scrollbar-thumb {
   background-color: #000c1b;
 }
+
+#whatsapp {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(51, 204, 51, 0.3);
+  color: rgb(245, 245, 245);
+  font-size: 30px;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+}
+
+#whatsapp:hover {
+  cursor: pointer;
+}
