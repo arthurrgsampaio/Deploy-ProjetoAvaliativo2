@@ -294,6 +294,14 @@ li {
   #inspoList {
     margin: 12px 60px 0 90px;
   }
+  .blur h1,
+  h2,
+  p,
+  ul,
+  li,
+  .main {
+    color: #dd9000;
+  }
 }
 
 @media screen and (max-width: 1325px) {
@@ -356,9 +364,6 @@ li {
   #pNome,
   #sNome {
     font-size: 24px;
-  }
-  #inspo h2 {
-    color: #0088d6;
   }
 }
 
