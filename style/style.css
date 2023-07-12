@@ -7,6 +7,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* utilizado apenas para que no mobile, a barra fique com cor parecida à do site, e não branca */
+body {
+  background-color: #000c1b;
+}
+
 #organization {
   display: flex;
 }
