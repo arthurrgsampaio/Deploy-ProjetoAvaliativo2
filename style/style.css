@@ -132,6 +132,7 @@ main {
   width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.137);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -166,11 +167,15 @@ li {
   width: 95%;
   justify-content: flex-start;
   margin: 16px 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 #ogMain {
   width: 95%;
   height: 95%;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 #infos,
