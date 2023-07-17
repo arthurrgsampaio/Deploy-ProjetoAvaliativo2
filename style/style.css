@@ -1,5 +1,8 @@
+/* import da fonte utilizada */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
+/* ********************************************************************** */
+/* reset geral */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +10,14 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* ********************************************************************** */
 /* utilizado apenas para que no mobile, a barra fique com cor parecida à do site, e não branca */
 body {
   background-color: #000c1b;
 }
 
+/* ********************************************************************** */
+/* organização da barra lateral (header em telas pequenas) */
 #organization {
   display: flex;
 }
@@ -34,20 +40,6 @@ aside {
   flex-direction: column;
 }
 
-main {
-  flex: 5;
-  background: url("../images/background2.jpg");
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: center;
-  box-shadow: inset 16px 0px 15px -3px #00000059;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Fira Code", monospace;
-}
-
 #eu {
   display: flex;
   flex-direction: column;
@@ -61,6 +53,15 @@ main {
   border-radius: 50%;
   padding: 20px;
   box-shadow: inset 0px -5px 22px 2px rgba(0, 0, 0, 0.74);
+}
+
+#logo2 {
+  display: none;
+  width: 50%;
+}
+
+#nome {
+  display: none;
 }
 
 #links {
@@ -118,13 +119,20 @@ main {
   width: 75%;
 }
 
-#logo2 {
-  display: none;
-  width: 50%;
-}
-
-#nome {
-  display: none;
+/* ********************************************************************** */
+/* organização da parte principal da página ("corpo") */
+main {
+  flex: 5;
+  background: url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 16px 0px 15px -3px #00000059;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fira Code", monospace;
 }
 
 #blur {
@@ -137,12 +145,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.main {
-  font-size: 20px;
-  align-items: flex-start;
-  font-family: "Fira Code", monospace;
 }
 
 .blur h1,
@@ -158,8 +160,8 @@ li {
   padding-right: 32px;
 }
 
-#dados {
-  margin-left: 30px;
+.tags {
+  color: #0066a1;
 }
 
 .tags {
@@ -169,6 +171,12 @@ li {
   margin: 16px 0;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+}
+
+.main {
+  font-size: 20px;
+  align-items: flex-start;
+  font-family: "Fira Code", monospace;
 }
 
 #ogMain {
@@ -186,15 +194,15 @@ li {
   margin-bottom: 16px;
 }
 
+#dados {
+  margin-left: 30px;
+}
+
 #inspo {
   padding: 16px 0 16px 60px;
   background-color: rgba(255, 255, 255, 0.075);
   border-radius: 16px;
   height: 330px;
-}
-
-.tags {
-  color: #0066a1;
 }
 
 #inspoList {
@@ -207,16 +215,6 @@ li {
   flex-wrap: wrap;
   overflow-y: scroll;
   margin: 12px 60px 0 85px;
-}
-
-.inspoCard {
-  background-color: #003a8552;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  border-radius: 16px;
-  width: 220px;
 }
 
 #inspoList a {
@@ -240,6 +238,16 @@ li {
   color: whitesmoke;
 }
 
+.inspoCard {
+  background-color: #003a8552;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 16px;
+  width: 220px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: rgba(255, 255, 255, 0);
@@ -250,6 +258,7 @@ li {
   border-radius: 10px;
 }
 
+/* botão fixo do whatsapp */
 #whatsapp {
   width: 60px;
   height: 60px;
@@ -267,6 +276,8 @@ li {
   cursor: pointer;
 }
 
+/* ********************************************************************** */
+/* media query para telas de 1600px para baixo*/
 @media screen and (max-width: 1600px) {
   body {
     min-height: 100vh;
@@ -282,11 +293,6 @@ li {
     width: 100%;
     background: linear-gradient(180deg, #000c1b 0%, #003985 75%);
     height: fit-content;
-  }
-  #ftPerfil {
-    width: 200px;
-  }
-  #fixed {
     flex-direction: row;
   }
   #eu {
@@ -297,11 +303,14 @@ li {
     background-color: rgba(255, 255, 255, 0.253);
     border-radius: 40px;
   }
-  #logo {
-    display: none;
+  #ftPerfil {
+    width: 200px;
   }
   #logo2 {
     display: block;
+  }
+  #logo {
+    display: none;
   }
   #links {
     width: 40%;
@@ -309,9 +318,6 @@ li {
   main {
     box-shadow: inset 0px 16px 15px -3px #00000059;
     height: 100%;
-  }
-  #inspoList {
-    margin: 12px 60px 0 90px;
   }
   .blur h1,
   h2,
@@ -321,20 +327,24 @@ li {
   .main {
     color: #dd9000;
   }
+  #inspoList {
+    margin: 12px 60px 0 90px;
+  }
 }
 
+/* ********************************************************************** */
+/* ajuste da posição das inspirações */
 @media screen and (max-width: 1325px) {
   #inspoList {
     margin: 12px 60px 0 70px;
   }
 }
 
+/* ********************************************************************** */
+/* ajuste para telas menores de 900px */
 @media screen and (max-width: 900px) {
   #fixed {
     flex-direction: column;
-  }
-  #links {
-    width: 65%;
   }
   #eu {
     margin: 40px 40px 0px 40px;
@@ -343,24 +353,28 @@ li {
     padding: 30px 0;
     background-color: rgba(255, 255, 255, 0.253);
     border-radius: 40px;
+  }
+  #links {
+    width: 65%;
   }
   #logo {
     width: 40%;
   }
 }
 
+/* ********************************************************************** */
+/* ajuste da posição das inspirações */
 @media screen and (max-width: 1050px) {
   #inspoList {
     margin: 12px 60px 0 45px;
   }
 }
 
+/* ********************************************************************** */
+/* ajuste para telas menores de 740px */
 @media screen and (max-width: 740px) {
   #fixed {
     flex-direction: column;
-  }
-  #links {
-    width: 95%;
   }
   #eu {
     margin: 40px 40px 0px 40px;
@@ -369,9 +383,6 @@ li {
     padding: 30px 0;
     background-color: rgba(255, 255, 255, 0.253);
     border-radius: 40px;
-  }
-  #logo2 {
-    display: none;
   }
   #ftPerfil {
     width: 20%;
@@ -379,34 +390,45 @@ li {
     padding: 10px;
     box-shadow: inset 0px -5px 22px 2px rgba(0, 0, 0, 0.74);
   }
+  #logo2 {
+    display: none;
+  }
   #nome {
     display: block;
     padding: 0;
     margin-left: 30px;
   }
-  #links {
-    margin: 8px 0;
-  }
   #pNome,
   #sNome {
     font-size: 40px;
+  }
+  #links {
+    width: 95%;
+    margin: 8px 0;
   }
   #inspoList {
     margin: 12px 60px 0 35px;
   }
 }
 
+/* ********************************************************************** */
+/* ajuste para telas menores do nome e lista de inspiração */
 @media screen and (max-width: 600px) {
-  #inspoList {
-    margin: 12px 60px 0 15px;
-  }
   #pNome,
   #sNome {
     font-size: 24px;
   }
+  #inspoList {
+    margin: 12px 60px 0 15px;
+  }
 }
 
+/* ********************************************************************** */
+/* ajuste dos paddings das caixas da main */
 @media screen and (max-width: 500px) {
+  #nome p {
+    font-size: 18px;
+  }
   #infos,
   #journey {
     padding: 16px 0 16px 25px;
@@ -417,11 +439,10 @@ li {
   #inspoList {
     padding: 16px 0 16px 25px;
   }
-  #nome p {
-    font-size: 18px;
-  }
 }
 
+/* ********************************************************************** */
+/* ajuste dos paddings e margens para telas pequenas */
 @media screen and (max-width: 430px) {
   #infos {
     padding: 16px 0 16px 10px;
@@ -431,6 +452,8 @@ li {
   }
 }
 
+/* ********************************************************************** */
+/* ajuste da fonte para telas pequenas */
 @media screen and (max-width: 390px) {
   .blur h1,
   h2,
